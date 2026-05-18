@@ -41,12 +41,16 @@
       html {
         color: var(--ink);
         background: var(--paper);
+        max-width: 100%;
+        overflow-x: clip;
         scroll-behavior: smooth;
       }
 
       body {
         margin: 0;
         min-width: 320px;
+        max-width: 100%;
+        overflow-x: clip;
         background: var(--paper);
         color: var(--ink);
         font-family: "Manrope", sans-serif;
@@ -56,6 +60,13 @@
 
       body.menu-open {
         overflow: hidden;
+      }
+
+      @supports not (overflow: clip) {
+        html,
+        body {
+          overflow-x: hidden;
+        }
       }
 
       img {
@@ -400,6 +411,24 @@
         margin-top: 34px;
       }
 
+      .concept-shortcut {
+        display: inline-flex;
+        width: fit-content;
+        max-width: 100%;
+        margin-top: 22px;
+        color: var(--accent);
+        font-weight: 900;
+        line-height: 1.35;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .concept-shortcut:hover,
+      .concept-shortcut:focus-visible {
+        color: var(--ink);
+        outline: none;
+      }
+
       .problem-intro {
         max-width: 820px;
       }
@@ -526,6 +555,11 @@
 
       .segment-blue .lead {
         color: rgba(255, 255, 255, 0.88);
+      }
+
+      .segment-blue > * {
+        min-width: 0;
+        max-width: 100%;
       }
 
       .arrow-list,
@@ -751,6 +785,42 @@
       .method-note p {
         margin-top: 10px;
         color: var(--muted);
+      }
+
+      .concept-video-layout {
+        grid-template-columns: minmax(320px, 0.82fr) minmax(520px, 1.18fr);
+        gap: 54px;
+      }
+
+      .concept-video-copy {
+        align-self: center;
+      }
+
+      .concept-video-cta {
+        margin-top: 30px;
+      }
+
+      .concept-video-media {
+        margin: 0;
+        padding: 14px;
+        border: 1px solid var(--line-strong);
+        background: #fff;
+      }
+
+      .concept-video-media video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: var(--ink);
+        object-fit: cover;
+      }
+
+      .concept-video-media figcaption {
+        margin-top: 16px;
+        padding: 0 2px 2px;
+        color: var(--muted);
+        font-weight: 800;
+        line-height: 1.45;
       }
 
       .artifact-grid,
@@ -1276,6 +1346,23 @@
         font-size: 14px;
       }
 
+      @media (max-width: 1240px) {
+        .timeline-item,
+        .timeline-item:nth-child(even) {
+          grid-template-columns: 1fr;
+          padding-left: 0;
+          border-left: 0;
+        }
+
+        .timeline-number {
+          width: auto;
+          height: auto;
+          min-height: 44px;
+          margin-left: 0;
+          border-radius: 2px;
+        }
+      }
+
       @media (max-width: 1180px) {
         .nav,
         .header-cta {
@@ -1293,6 +1380,7 @@
         .expert-layout,
         .hybrid-layout,
         .methods-layout,
+        .concept-video-layout,
         .ai-header,
         .knowledge-layout,
         .work-layout,
@@ -1456,6 +1544,12 @@
           min-height: auto;
         }
 
+        .segment-blue h2,
+        .segment-blue .lead,
+        .segment-blue .subline {
+          max-width: 100%;
+        }
+
         .segment-blue h2 {
           font-size: clamp(32px, 9vw, 38px);
         }
@@ -1544,6 +1638,14 @@
         }
       }
 
+      @media (max-width: 360px) {
+        .segment-blue h2,
+        .segment-blue .lead,
+        .segment-blue .subline {
+          max-width: calc(100vw - 76px);
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
@@ -1568,6 +1670,7 @@
           <a href="#audiences">Кому подходит</a>
           <a href="#format">Формат</a>
           <a href="#methods">Методики</a>
+          <a href="#concept-video">Видео</a>
           <a href="#work">Как работаем</a>
           <a href="#program">Программа</a>
           <a href="#conditions">Условия</a>
@@ -1586,6 +1689,7 @@
             <a href="#audiences">Кому подходит</a>
             <a href="#format">Формат</a>
             <a href="#methods">Методики</a>
+            <a href="#concept-video">Видео</a>
             <a href="#work">Как работаем</a>
             <a href="#program">Программа</a>
             <a href="#conditions">Условия</a>
@@ -1610,6 +1714,7 @@
             </p>
             <div class="hero-actions">
               <a class="button-primary" href="#contact">Записаться на встречу-знакомство</a>
+              <a class="button-secondary" href="#concept-video">Что такое JTBD и CJM?</a>
             </div>
           </div>
         </div>
@@ -1620,6 +1725,7 @@
           <div class="problem-intro">
             <div class="eyebrow">Проблема</div>
             <h2>У вас не «мало знаний». У вас нет собранной системы</h2>
+            <a class="concept-shortcut" href="#concept-video">Что такое JTBD и CJM? Посмотреть короткое видео</a>
           </div>
           <div class="problem-board">
             <div class="visual-panel problem-visual">
@@ -1846,6 +1952,29 @@
               </article>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="concept-video">
+        <div class="wrap grid concept-video-layout">
+          <div class="concept-video-copy">
+            <div class="eyebrow">Видео</div>
+            <h2>JTBD и CJM простым языком</h2>
+            <p class="lead">
+              Короткое объяснение двух методик, на которых строится практикум: как понять реальную работу клиента и
+              собрать путь к решению в управляемую систему.
+            </p>
+            <a class="button-primary concept-video-cta" href="#contact">Записаться на встречу-знакомство</a>
+          </div>
+          <figure class="concept-video-media">
+            <video controls preload="metadata" playsinline poster="assets/video/concepts-jtbd-cjm-poster.jpg">
+              <source src="assets/video/concepts-jtbd-cjm.mp4" type="video/mp4" />
+              Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+            <figcaption>
+              Посмотрите перед заявкой, если хотите быстро понять, зачем в программе нужны JTBD и CJM.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -2177,6 +2306,19 @@
         document.body.classList.add("menu-open");
       }
 
+      function scrollToTarget(targetId) {
+        const target = document.querySelector(targetId);
+        if (!target) {
+          return false;
+        }
+
+        const headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header")) || 0;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+        window.scrollTo({ top, behavior: "smooth" });
+        window.history.pushState(null, "", targetId);
+        return true;
+      }
+
       menuButton.addEventListener("click", () => {
         const isOpen = menuButton.getAttribute("aria-expanded") === "true";
         isOpen ? closeMenu() : openMenu();
@@ -2191,16 +2333,26 @@
             return;
           }
 
-          const target = document.querySelector(targetId);
-          if (!target) {
+          if (scrollToTarget(targetId)) {
+            event.preventDefault();
+          }
+        });
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        if (mobileMenu.contains(link)) {
+          return;
+        }
+
+        link.addEventListener("click", (event) => {
+          const targetId = link.getAttribute("href");
+          if (!targetId || targetId === "#" || !targetId.startsWith("#")) {
             return;
           }
 
-          event.preventDefault();
-          const headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header")) || 0;
-          const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
-          window.scrollTo({ top, behavior: "smooth" });
-          window.history.pushState(null, "", targetId);
+          if (scrollToTarget(targetId)) {
+            event.preventDefault();
+          }
         });
       });
 
