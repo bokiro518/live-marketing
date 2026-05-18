@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Согласие на обработку персональных данных | Живой маркетинг</title>
+    <meta name="description" content="Согласие на обработку персональных данных для формы заявки сайта Живой маркетинг." />
+    <link rel="canonical" href="https://www.live-marketing.ru/consent" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap");
+
+      :root {
+        --paper: #ffffff;
+        --paper-soft: #fbfbfb;
+        --ink: #132842;
+        --muted: #526883;
+        --accent: #2452ff;
+        --line: rgba(19, 40, 66, 0.18);
+        --max: 980px;
+        --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        color: var(--ink);
+        background: var(--paper);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Manrope", sans-serif;
+        line-height: 1.62;
+        letter-spacing: 0;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(36, 82, 255, 0.28);
+      }
+
+      a:hover,
+      a:focus-visible {
+        border-bottom-color: currentColor;
+        outline: none;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(19, 40, 66, 0.09);
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .topbar-inner,
+      .page,
+      .footer-inner {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar-inner {
+        min-height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        border: 0;
+        color: var(--ink);
+        display: grid;
+        gap: 1px;
+      }
+
+      .brand strong {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .back-link {
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 800;
+        transition: border-color 160ms var(--ease), color 160ms var(--ease);
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .page {
+        padding: 64px 0 78px;
+      }
+
+      .document-head {
+        max-width: 760px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 12px 0 16px;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(34px, 5vw, 62px);
+        line-height: 0.96;
+        font-weight: 700;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .policy-document {
+        margin-top: 42px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .policy-document h1 {
+        display: none;
+      }
+
+      .policy-document h2 {
+        margin: 30px 0 4px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(25px, 3vw, 36px);
+        line-height: 1.08;
+      }
+
+      .policy-document p {
+        margin: 0;
+        color: #223a56;
+        font-size: 16px;
+      }
+
+      .policy-document .numbered {
+        color: var(--ink);
+      }
+
+      .policy-document .dash {
+        padding-left: 22px;
+        text-indent: -18px;
+      }
+
+      .data-row {
+        display: grid;
+        grid-template-columns: minmax(180px, 260px) 1fr;
+        gap: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(19, 40, 66, 0.1);
+      }
+
+      .data-row strong {
+        color: var(--ink);
+      }
+
+      .data-subrow {
+        padding-left: 276px;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        background: var(--paper-soft);
+      }
+
+      .footer-inner {
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .footer-inner a {
+        color: var(--ink);
+        font-weight: 800;
+      }
+
+      @media (max-width: 720px) {
+        .topbar-inner,
+        .page,
+        .footer-inner {
+          width: min(var(--max), calc(100% - 28px));
+        }
+
+        .topbar-inner,
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14px 0;
+        }
+
+        .page {
+          padding: 42px 0 58px;
+        }
+
+        .lead {
+          font-size: 16px;
+        }
+
+        .data-row {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .data-subrow {
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">
+          <strong>Живой маркетинг</strong>
+          <span>JTBD, CJM и AI</span>
+        </a>
+        <a class="back-link" href="/">Вернуться на сайт</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <header class="document-head">
+        <div class="eyebrow">Персональные данные</div>
+        <h1>Согласие на обработку персональных данных</h1>
+        <p class="lead">Документ описывает, на что именно пользователь соглашается при отправке формы заявки на сайте.</p>
+      </header>
+
+      <article class="policy-document">
+        <h1>Согласие на обработку персональных данных</h1>
+        <p>Настоящее согласие подготовлено на основе формы согласия на обработку персональных данных Роскомнадзора и адаптировано для сайта <a href="/">https://www.live-marketing.ru</a>.</p>
+
+        <h2>1. Субъект персональных данных</h2>
+        <p>Пользователь сайта https://www.live-marketing.ru, который заполняет форму заявки на встречу-знакомство и проставляет отметку согласия под формой, свободно, своей волей и в своем интересе дает согласие на обработку своих персональных данных.</p>
+
+        <h2>2. Оператор персональных данных</h2>
+        <p>Согласие дается Оператору: ИП Бокий Р.И.</p>
+        <p>Контакт для обращений по вопросам обработки персональных данных: <a href="mailto:rb28@bk.ru">rb28@bk.ru</a>.</p>
+
+        <h2>3. Цели обработки персональных данных</h2>
+        <p>Персональные данные обрабатываются в следующих целях:</p>
+        <p class="dash">— прием и обработка заявки Пользователя на встречу-знакомство по курсу-практикуму «Живой маркетинг: JTBD, CJM и AI»;</p>
+        <p class="dash">— связь с Пользователем по указанному телефону для согласования встречи, ответа на вопрос и обсуждения участия в курсе;</p>
+        <p class="dash">— подготовка к заключению, заключение и исполнение договора, если Пользователь примет решение участвовать в курсе.</p>
+
+        <h2>4. Перечень персональных данных</h2>
+        <p>Согласие дается на обработку следующих персональных данных, которые Пользователь самостоятельно указывает в форме:</p>
+        <p class="dash">— имя;</p>
+        <p class="dash">— номер телефона.</p>
+        <p>Оператор не запрашивает через форму паспортные данные, адрес регистрации, дату рождения, СНИЛС, ИНН, сведения о семье, доходах, имуществе, здоровье или другие избыточные данные.</p>
+
+        <h2>5. Лица, которым может быть поручена обработка</h2>
+        <p>Для работы сайта и связи с Пользователем Оператор может использовать сервисы хостинга, технической поддержки сайта, электронной почты и связи. Такие сервисы получают доступ к персональным данным только в объеме, необходимом для приема заявки, технической передачи сообщения и коммуникации с Пользователем.</p>
+        <p>При подключении новых сервисов, которые будут получать персональные данные Пользователей, Оператор актуализирует Политику обработки персональных данных и иные необходимые документы.</p>
+
+        <h2>6. Действия с персональными данными и способ обработки</h2>
+        <p>Пользователь дает согласие на совершение следующих действий с персональными данными:</p>
+        <p class="dash">— сбор, запись, систематизация, накопление и хранение;</p>
+        <p class="dash">— уточнение, обновление и изменение;</p>
+        <p class="dash">— извлечение и использование для связи с Пользователем;</p>
+        <p class="dash">— передача, предоставление и доступ в случаях, необходимых для работы сайта, связи с Пользователем или исполнения требований закона;</p>
+        <p class="dash">— обезличивание, блокирование, удаление и уничтожение.</p>
+        <p>Обработка персональных данных осуществляется смешанным способом: с использованием средств автоматизации и без использования таких средств.</p>
+
+        <h2>7. Срок действия согласия и порядок отзыва</h2>
+        <p>Согласие действует с момента отправки формы на сайте до достижения целей обработки персональных данных либо до момента отзыва согласия Пользователем.</p>
+        <p>Пользователь может отозвать согласие в любое время, направив Оператору сообщение на адрес <a href="mailto:rb28@bk.ru">rb28@bk.ru</a> с темой «Отзыв согласия на обработку персональных данных».</p>
+        <p>После получения отзыва Оператор прекращает обработку персональных данных в сроки, предусмотренные законодательством Российской Федерации, если отсутствуют иные законные основания для продолжения обработки.</p>
+
+        <h2>8. Подтверждение согласия</h2>
+        <p>Проставляя отметку в чекбоксе под формой и отправляя форму на сайте, Пользователь подтверждает, что ознакомлен с настоящим Согласием и <a href="/privacy">Политикой обработки персональных данных</a>, понимает их содержание и дает согласие на обработку персональных данных на указанных условиях.</p>
+
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Живой маркетинг: JTBD, CJM и AI</span>
+        <a href="/privacy">Политика обработки персональных данных</a>
+        <a href="/">На главную</a>
+      </div>
+    </footer>
+  </body>
+</html>
