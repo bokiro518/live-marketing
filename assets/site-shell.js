@@ -595,17 +595,25 @@
           </div>
 
           <form class="lead-form" id="lead-form" action="https://form.live-marketing.ru/lead.php" method="post">
-            <div class="field" hidden aria-hidden="true">
-              <label for="website">Сайт</label>
-              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-            </div>
             <div class="field">
               <label for="name">Имя</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
             <div class="field">
               <label for="phone">Телефон</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                placeholder="+7 (900) 000-00-00"
+                maxlength="18"
+                aria-describedby="phone-hint phone-error"
+                required
+              />
+              <span class="field-hint" id="phone-hint">Российский сотовый номер в формате +7 (900) 000-00-00</span>
+              <span class="field-error" id="phone-error" aria-live="polite"></span>
             </div>
             <label class="consent">
               <input type="checkbox" name="consent" required />
@@ -639,6 +647,8 @@
       const mobileLinks = mobileMenu.querySelectorAll("a");
       const leadForm = document.querySelector("#lead-form");
       const formStatus = document.querySelector("#form-status");
+      const phoneInput = document.querySelector("#phone");
+      const phoneError = document.querySelector("#phone-error");
 
       function closeMenu() {
         menuButton.setAttribute("aria-expanded", "false");
@@ -710,9 +720,91 @@
         }
       });
 
+      function getRuMobileDigits(value) {
+        const digits = value.replace(/\D/g, "");
+        if (!digits) {
+          return "";
+        }
+
+        let localDigits = digits;
+        if (localDigits.startsWith("7") || localDigits.startsWith("8")) {
+          localDigits = localDigits.slice(1);
+        }
+
+        return `7${localDigits.slice(0, 10)}`;
+      }
+
+      function formatRuMobilePhone(value) {
+        const normalized = getRuMobileDigits(value);
+        if (!normalized) {
+          return "";
+        }
+
+        const localDigits = normalized.slice(1);
+        let formatted = "+7";
+
+        if (localDigits.length > 0) {
+          formatted += ` (${localDigits.slice(0, 3)}`;
+        }
+
+        if (localDigits.length >= 3) {
+          formatted += ")";
+        }
+
+        if (localDigits.length > 3) {
+          formatted += ` ${localDigits.slice(3, 6)}`;
+        }
+
+        if (localDigits.length > 6) {
+          formatted += `-${localDigits.slice(6, 8)}`;
+        }
+
+        if (localDigits.length > 8) {
+          formatted += `-${localDigits.slice(8, 10)}`;
+        }
+
+        return formatted;
+      }
+
+      function getPhoneValidationMessage(value) {
+        const normalized = getRuMobileDigits(value);
+
+        if (!normalized) {
+          return "Укажите номер телефона.";
+        }
+
+        if (normalized.length < 11) {
+          return "Введите полный номер: +7 (900) 000-00-00.";
+        }
+
+        if (!/^79\d{9}$/.test(normalized)) {
+          return "Укажите российский сотовый номер: +7 (9XX) XXX-XX-XX.";
+        }
+
+        return "";
+      }
+
+      function updatePhoneValidity(showMessage) {
+        const message = getPhoneValidationMessage(phoneInput.value);
+        phoneInput.setCustomValidity(message);
+        phoneInput.classList.toggle("invalid", Boolean(message && showMessage));
+        phoneError.textContent = showMessage ? message : "";
+        return !message;
+      }
+
+      phoneInput.addEventListener("input", () => {
+        phoneInput.value = formatRuMobilePhone(phoneInput.value);
+        updatePhoneValidity(phoneInput.classList.contains("invalid"));
+      });
+
+      phoneInput.addEventListener("blur", () => {
+        updatePhoneValidity(Boolean(phoneInput.value));
+      });
+
       leadForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         formStatus.classList.remove("error");
+        updatePhoneValidity(true);
 
         if (!leadForm.checkValidity()) {
           leadForm.reportValidity();
@@ -722,8 +814,7 @@
         const payload = {
           name: leadForm.elements.name.value.trim(),
           phone: leadForm.elements.phone.value.trim(),
-          consent: leadForm.elements.consent.checked ? "1" : "",
-          website: leadForm.elements.website.value.trim()
+          consent: leadForm.elements.consent.checked ? "1" : ""
         };
 
         if (window.location.protocol === "file:") {
@@ -747,6 +838,9 @@
 
           formStatus.textContent = "Заявка отправлена. Я свяжусь с вами, чтобы договориться о короткой встрече-знакомстве.";
           leadForm.reset();
+          phoneInput.classList.remove("invalid");
+          phoneInput.setCustomValidity("");
+          phoneError.textContent = "";
         } catch (error) {
           formStatus.classList.add("error");
           formStatus.textContent = "Не удалось отправить заявку автоматически. Пожалуйста, позвоните или напишите по номеру 8-913-023-85-65.";

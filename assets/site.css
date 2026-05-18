@@ -1257,6 +1257,22 @@ h3 {
   gap: 8px;
 }
 
+.field-hint,
+.field-error {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.field-hint {
+  color: var(--muted);
+}
+
+.field-error {
+  min-height: 16px;
+  color: #a03c32;
+  font-weight: 800;
+}
+
 label,
 .consent {
   color: var(--ink);
@@ -1277,6 +1293,11 @@ input {
 input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 4px rgba(36, 82, 255, 0.1);
+}
+
+input.invalid {
+  border-color: #a03c32;
+  box-shadow: 0 0 0 4px rgba(160, 60, 50, 0.11);
 }
 
 .consent {
