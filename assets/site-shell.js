@@ -594,7 +594,11 @@
             </div>
           </div>
 
-          <form class="lead-form" id="lead-form" action="/api/lead" method="post">
+          <form class="lead-form" id="lead-form" action="https://form.live-marketing.ru/lead.php" method="post">
+            <div class="field" hidden aria-hidden="true">
+              <label for="website">Сайт</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="field">
               <label for="name">Имя</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
@@ -717,35 +721,35 @@
 
         const payload = {
           name: leadForm.elements.name.value.trim(),
-          phone: leadForm.elements.phone.value.trim()
+          phone: leadForm.elements.phone.value.trim(),
+          consent: leadForm.elements.consent.checked ? "1" : "",
+          website: leadForm.elements.website.value.trim()
         };
 
-        // TODO: create Vercel endpoint /api/lead that accepts { name, phone }
-        // and sends an email notification to the course owner.
         if (window.location.protocol === "file:") {
           formStatus.classList.add("error");
-          formStatus.textContent = "Форма готова к подключению: на сайте заявка будет отправляться в /api/lead. Сейчас автоматическая отправка не включена.";
+          formStatus.textContent = "Форма готова к подключению: на опубликованном сайте заявка будет отправляться через защищенный обработчик.";
           return;
         }
 
         formStatus.textContent = "Отправляю заявку...";
 
         try {
-          const response = await fetch("/api/lead", {
+          const response = await fetch(leadForm.action, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
           });
 
           if (!response.ok) {
-            throw new Error("Lead endpoint is not ready");
+            throw new Error("Lead submission failed");
           }
 
           formStatus.textContent = "Заявка отправлена. Я свяжусь с вами, чтобы договориться о короткой встрече-знакомстве.";
           leadForm.reset();
         } catch (error) {
           formStatus.classList.add("error");
-          formStatus.textContent = "Автоматическая отправка пока не подключена. Пожалуйста, позвоните или напишите по номеру 8-913-023-85-65.";
+          formStatus.textContent = "Не удалось отправить заявку автоматически. Пожалуйста, позвоните или напишите по номеру 8-913-023-85-65.";
         }
       });
 
