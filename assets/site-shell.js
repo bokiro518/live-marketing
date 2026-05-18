@@ -786,9 +786,10 @@
 
       function updatePhoneValidity(showMessage) {
         const message = getPhoneValidationMessage(phoneInput.value);
-        phoneInput.setCustomValidity(message);
-        phoneInput.classList.toggle("invalid", Boolean(message && showMessage));
-        phoneError.textContent = showMessage ? message : "";
+        const shouldShowMessage = Boolean(message && showMessage);
+        phoneInput.setCustomValidity(shouldShowMessage ? message : "");
+        phoneInput.classList.toggle("invalid", shouldShowMessage);
+        phoneError.textContent = shouldShowMessage ? message : "";
         return !message;
       }
 
