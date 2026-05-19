@@ -17,8 +17,27 @@
     <!-- /Yandex.Metrika counter -->
     <!-- Top.Mail.Ru counter -->
     <script type="text/javascript">
-    var _tmr = window._tmr || (window._tmr = []);
-    _tmr.push({id: "3767267", type: "pageView", start: (new Date()).getTime()});
+    (function (w) {
+      var storageKey = "liveMarketingVisitorId";
+      var visitorId = "";
+
+      try {
+        visitorId = w.localStorage.getItem(storageKey);
+        if (!visitorId) {
+          if (w.crypto && typeof w.crypto.randomUUID === "function") {
+            visitorId = w.crypto.randomUUID();
+          } else {
+            visitorId = "lm-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+          }
+          w.localStorage.setItem(storageKey, visitorId);
+        }
+      } catch (error) {
+        visitorId = "lm-session-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+      }
+
+      var _tmr = w._tmr || (w._tmr = []);
+      _tmr.push({id: "3767299", type: "pageView", start: (new Date()).getTime(), pid: visitorId});
+    })(window);
     (function (d, w, id) {
       if (d.getElementById(id)) return;
       var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
@@ -44,7 +63,7 @@
   </head>
   <body>
     <noscript><div><img src="https://mc.yandex.ru/watch/109290984" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3767267;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3767299;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
     <main class="shell-loading" aria-live="polite">Загрузка сайта...</main>
     <noscript>Для открытия сайта включите JavaScript.</noscript>
     <script src="https://live-marketing.vercel.app/assets/site-shell.js" defer></script>
