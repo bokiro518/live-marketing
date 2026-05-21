@@ -45,7 +45,7 @@
       <section class="section hero" id="hero">
         <div class="wrap grid hero-grid">
           <div class="visual-panel hero-visual">
-            <img src="assets/gamma-hero-desk.svg" alt="Line-art рабочий стол с блокнотом, растением и материалами практикума" />
+            <img src="https://live-marketing.vercel.app/assets/gamma-hero-desk.svg" alt="Line-art рабочий стол с блокнотом, растением и материалами практикума" />
           </div>
           <div>
             <div class="eyebrow">Для предпринимателей · 6 месяцев · Реальный проект · старт - май 2026</div>
@@ -71,7 +71,7 @@
           </div>
           <div class="problem-board">
             <div class="visual-panel problem-visual">
-              <img src="assets/gamma-problem-visual.svg" alt="Line-art банка с перепутанными материалами внутри" />
+              <img src="https://live-marketing.vercel.app/assets/gamma-problem-visual.svg" alt="Line-art банка с перепутанными материалами внутри" />
             </div>
             <div class="problem-stack">
               <article class="problem-card">
@@ -106,21 +106,21 @@
           <div class="grid three">
             <article class="audience-card">
               <div class="audience-visual">
-                <img src="assets/gamma-audience-owner.svg" alt="Line-art предприниматель за рабочим столом" />
+                <img src="https://live-marketing.vercel.app/assets/gamma-audience-owner.svg" alt="Line-art предприниматель за рабочим столом" />
               </div>
               <h3>Есть команда или подрядчики</h3>
               <p>Но маркетинг распадается на отдельные задачи: реклама, посты, сайт, акции, звонки, правки и срочные идеи.</p>
             </article>
             <article class="audience-card">
               <div class="audience-visual">
-                <img src="assets/gamma-problem-visual.svg" alt="Line-art банка с перепутанными материалами внутри" />
+                <img src="https://live-marketing.vercel.app/assets/gamma-problem-visual.svg" alt="Line-art банка с перепутанными материалами внутри" />
               </div>
               <h3>Нет ясной системы заявок</h3>
               <p>Деньги тратятся, люди заняты, но трудно понять, где теряется клиент и что именно нужно менять.</p>
             </article>
             <article class="audience-card">
               <div class="audience-visual">
-                <img src="assets/jtbd-cjm-gamma.png" alt="Схема JTBD и CJM как основы управляемого маркетинга" />
+                <img src="https://live-marketing.vercel.app/assets/jtbd-cjm-gamma.png" alt="Схема JTBD и CJM как основы управляемого маркетинга" />
               </div>
               <h3>Нужен понятный план</h3>
               <p>Не теория ради теории, а стратегия, бюджет, показатели и задачи, которые можно обсуждать с командой.</p>
@@ -150,7 +150,7 @@
         <div class="wrap grid two">
           <div class="common-diagram">
             <img
-              src="assets/common-ground-gamma.png"
+              src="https://live-marketing.vercel.app/assets/common-ground-gamma.png"
               alt="Схема: реальный проект, обратная связь, безопасная группа и план действий"
             />
           </div>
@@ -201,7 +201,7 @@
           </div>
           <div class="hybrid-board" aria-label="Схема курса, консалтинга и рабочей группы">
             <div class="hybrid-center">
-              <img src="assets/gamma-file-icon.svg" alt="" aria-hidden="true" />
+              <img src="https://live-marketing.vercel.app/assets/gamma-file-icon.svg" alt="" aria-hidden="true" />
               <div>
                 <strong>Реальный проект участника</strong>
                 <span>Планы, документы и действия.</span>
@@ -224,7 +224,7 @@
           <div class="grid methods-layout">
             <div class="methods-visual">
               <img
-                src="assets/jtbd-cjm-gamma.png"
+                src="https://live-marketing.vercel.app/assets/jtbd-cjm-gamma.png"
                 alt="Venn-схема JTBD и CJM: в пересечении управляемая система маркетинга с показателями, метриками и бюджетами"
               />
             </div>
@@ -262,8 +262,8 @@
             <a class="button-primary concept-video-cta" href="#contact">Записаться на встречу-знакомство</a>
           </div>
           <figure class="concept-video-media">
-            <video controls preload="metadata" playsinline poster="assets/video/concepts-jtbd-cjm-poster.jpg">
-              <source src="assets/video/concepts-jtbd-cjm.mp4" type="video/mp4" />
+            <video controls preload="metadata" playsinline poster="https://live-marketing.vercel.app/assets/video/concepts-jtbd-cjm-poster.jpg">
+              <source src="https://live-marketing.vercel.app/assets/video/concepts-jtbd-cjm.mp4" type="video/mp4" />
               Ваш браузер не поддерживает воспроизведение видео.
             </video>
             <figcaption>
@@ -318,7 +318,7 @@
             <h2>На практике учимся использовать нейросети эффективно для экономии времени и денег</h2>
             </div>
             <div class="ai-icon">
-              <img src="assets/gamma-ai-visual.svg" alt="Line-art компактная схема связанных узлов для работы с AI" />
+              <img src="https://live-marketing.vercel.app/assets/gamma-ai-visual.svg" alt="Line-art компактная схема связанных узлов для работы с AI" />
             </div>
           </div>
             <ul class="ai-list">
@@ -380,7 +380,7 @@
             </ul>
           </div>
           <div class="knowledge-visual">
-            <img src="assets/gamma-knowledge-visual.svg" alt="Line-art карта связей базы знаний проекта" />
+            <img src="https://live-marketing.vercel.app/assets/gamma-knowledge-visual.svg" alt="Line-art карта связей базы знаний проекта" />
           </div>
           <div class="knowledge-result">Итог: создадим автоматизированную, самообучаемую базу знаний вашего проекта с AI-движком.</div>
         </div>
@@ -396,7 +396,7 @@
             </p>
           </div>
           <div class="work-visual">
-            <img src="assets/gamma-work-visual.png" alt="Gamma-схема weekly-цикла: новый блок, применение, обратная связь и разбор ДЗ" />
+            <img src="https://live-marketing.vercel.app/assets/gamma-work-visual.png" alt="Gamma-схема weekly-цикла: новый блок, применение, обратная связь и разбор ДЗ" />
           </div>
         </div>
       </section>
@@ -501,7 +501,7 @@
             </div>
           </div>
           <div class="conditions-visual">
-            <img src="assets/gamma-contact-visual.svg" alt="Line-art монеты и график условий первого потока" />
+            <img src="https://live-marketing.vercel.app/assets/gamma-contact-visual.svg" alt="Line-art монеты и график условий первого потока" />
           </div>
         </div>
       </section>
@@ -525,7 +525,7 @@
             </div>
           </div>
           <div class="author-visual">
-            <img src="assets/gamma-author-visual.svg" alt="Line-art группа участников за рабочим столом" />
+            <img src="https://live-marketing.vercel.app/assets/gamma-author-visual.svg" alt="Line-art группа участников за рабочим столом" />
           </div>
         </div>
       </section>
