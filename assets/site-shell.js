@@ -117,6 +117,7 @@
               </div>
               <h3>Предприниматель</h3>
               <p>Маркетинг вроде бы есть, а вроде бы и нет. Эффективно управлять рекламными бюджетами не получается.</p>
+              <a class="button-secondary audience-link" href="/entrepreneurs">Почему маркетинг не складывается в систему</a>
             </article>
             <article class="audience-card">
               <div class="audience-visual">
@@ -163,6 +164,10 @@
               <li>Инициативы нет, скорость низкая, напряжение растет.</li>
             </ul>
             <div class="result-panel">Результат: стратегия, бюджет, KPI и осмысленные задачи команде.</div>
+            <p class="segment-route-note">
+              Если это похоже на вашу ситуацию, начните не с новой рекламы и не с нового подрядчика. Сначала стоит понять, где рвется путь клиента и почему действия не складываются в систему.
+            </p>
+            <a class="button-secondary segment-route-cta" href="/entrepreneurs">Понять, где рвется маркетинг</a>
           </div>
         </div>
       </section>
@@ -508,6 +513,7 @@
                 <li>Контроль рекламных денег без микроменеджмента.</li>
                 <li>База знаний проекта с AI-движком.</li>
               </ul>
+              <a class="result-route-link" href="/entrepreneurs">Как перейти от бюджета и задач к системе &rarr;</a>
             </article>
             <article class="result-column">
               <h3>Эксперт / фрилансер</h3>

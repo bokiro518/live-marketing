@@ -507,6 +507,12 @@ h3 {
   color: var(--muted);
 }
 
+.audience-card .audience-link {
+  display: flex;
+  width: auto;
+  margin: 0 28px 30px;
+}
+
 .segment-layout {
   grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1fr);
   gap: 48px;
@@ -584,6 +590,15 @@ h3 {
   color: var(--result-ink);
   font-size: 20px;
   font-weight: 900;
+}
+
+.segment-route-note {
+  margin-top: 22px;
+  color: var(--muted);
+}
+
+.segment-route-cta {
+  margin-top: 14px;
 }
 
 .expert-layout {
@@ -1145,6 +1160,21 @@ h3 {
   color: var(--result-ink);
   font-size: 22px;
   font-weight: 900;
+}
+
+.result-route-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: var(--accent);
+  font-weight: 900;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.result-route-link:hover,
+.result-route-link:focus-visible {
+  text-decoration: underline;
+  outline: none;
 }
 
 .conditions-layout {
