@@ -16,6 +16,8 @@
 - `landing.html`
 - `privacy.html`
 - `privacy-policy.html` — совместимый переход на `/privacy`
+- `robots.txt`
+- `sitemap.xml`
 - `assets/`
 
 ## Обязательное правило аналитики
