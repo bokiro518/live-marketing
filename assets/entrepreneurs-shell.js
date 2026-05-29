@@ -745,6 +745,27 @@
         return !message;
       }
 
+      function getLeadTimingContext() {
+        const now = new Date();
+        const offsetMinutes = -now.getTimezoneOffset();
+        const offsetSign = offsetMinutes >= 0 ? "+" : "-";
+        const absoluteOffset = Math.abs(offsetMinutes);
+        const pad = (value) => String(value).padStart(2, "0");
+        const timezone = (() => {
+          try {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+          } catch (error) {
+            return "";
+          }
+        })();
+
+        return {
+          client_timezone: timezone,
+          client_timezone_offset: `${offsetSign}${pad(Math.floor(absoluteOffset / 60))}:${pad(absoluteOffset % 60)}`,
+          client_submitted_at: `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`
+        };
+      }
+
       phoneInput.addEventListener("input", () => {
         phoneInput.value = formatRuMobilePhone(phoneInput.value);
         updatePhoneValidity(phoneInput.classList.contains("invalid"));
@@ -767,7 +788,8 @@
         const payload = {
           name: leadForm.elements.name.value.trim(),
           phone: leadForm.elements.phone.value.trim(),
-          consent: leadForm.elements.consent.checked ? "1" : ""
+          consent: leadForm.elements.consent.checked ? "1" : "",
+          ...getLeadTimingContext()
         };
 
         if (window.location.protocol === "file:") {

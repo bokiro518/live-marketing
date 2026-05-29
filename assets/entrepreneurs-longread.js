@@ -62,8 +62,47 @@
         } catch (error) {}
       }
 
+      function getLeadTimingContext() {
+        var now = new Date();
+        var offsetMinutes = -now.getTimezoneOffset();
+        var offsetSign = offsetMinutes >= 0 ? "+" : "-";
+        var absoluteOffset = Math.abs(offsetMinutes);
+        var pad = function (value) {
+          return String(value).padStart(2, "0");
+        };
+        var timezone = "";
+
+        try {
+          timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        } catch (error) {}
+
+        return {
+          client_timezone: timezone,
+          client_timezone_offset: offsetSign + pad(Math.floor(absoluteOffset / 60)) + ":" + pad(absoluteOffset % 60),
+          client_submitted_at: now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate()) + " " + pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds())
+        };
+      }
+
+      function applyLeadTimingContext(form) {
+        var context = getLeadTimingContext();
+
+        Object.keys(context).forEach(function (name) {
+          var input = form.elements[name];
+
+          if (!input) {
+            input = document.createElement("input");
+            input.type = "hidden";
+            input.name = name;
+            form.appendChild(input);
+          }
+
+          input.value = context[name];
+        });
+      }
+
       document.querySelectorAll(".meeting-form").forEach(function (form) {
         form.addEventListener("submit", function () {
+          applyLeadTimingContext(form);
           trackGoal("leadFormSubmit");
         });
       });
