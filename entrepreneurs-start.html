@@ -1,0 +1,1669 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109290984', 'ym');
+
+      ym(109290984, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+    (function (w) {
+      var storageKey = "liveMarketingVisitorId";
+      var visitorId = "";
+
+      try {
+        visitorId = w.localStorage.getItem(storageKey);
+        if (!visitorId) {
+          if (w.crypto && typeof w.crypto.randomUUID === "function") {
+            visitorId = w.crypto.randomUUID();
+          } else {
+            visitorId = "lm-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+          }
+          w.localStorage.setItem(storageKey, visitorId);
+        }
+      } catch (error) {
+        visitorId = "lm-session-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12);
+      }
+
+      var _tmr = w._tmr || (w._tmr = []);
+      _tmr.push({id: "3767299", type: "pageView", start: (new Date()).getTime(), pid: visitorId});
+    })(window);
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+    </script>
+    <!-- /Top.Mail.Ru counter -->
+    <title>Для кого лонгрид о маркетинге как системе | Живой маркетинг</title>
+    <meta name="description" content="Бесплатный лонгрид для собственников малого бизнеса о том, как смотреть на маркетинг как на систему: клиент, путь к заявке, реклама, продажи, задачи команде и выводы." />
+    <meta property="og:title" content="Для кого лонгрид о маркетинге как системе" />
+    <meta property="og:description" content="Вход в большой разбор для собственников малого бизнеса: как смотреть на маркетинг как на бизнес-процесс, а не как на набор рекламных действий." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: oklch(100% 0 89.9);
+        --surface: oklch(98.8% 0 89.9);
+        --fg: #132842;
+        --muted: #526883;
+        --border: rgba(19, 40, 66, 0.18);
+        --accent: #2452ff;
+        --blue-soft: #b9d8ff;
+        --blue-wash: oklch(97% 0.015 251.2);
+        --copper: oklch(58% 0.108 66);
+        --copper-soft: oklch(94.6% 0.036 73);
+        --green: oklch(42% 0.11 145);
+        --green-soft: oklch(94.4% 0.034 145.3);
+        --gray-soft: oklch(95.1% 0.003 17.2);
+        --shadow: 0 24px 70px oklch(27.4% 0.056 254.7 / 0.08);
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
+        --max: 1240px;
+        --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        min-width: 320px;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-body);
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        overflow-x: hidden;
+        color: var(--fg);
+        background:
+          linear-gradient(90deg, transparent 0 calc(50% - 1px), oklch(87.3% 0.064 254.3 / 0.22) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+          var(--bg);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        width: var(--read-progress, 0%);
+        height: 4px;
+        background: var(--accent);
+        pointer-events: none;
+      }
+
+      a { color: inherit; }
+      button, input { font: inherit; }
+
+      p, li {
+        font-size: clamp(17px, 1.16vw, 19px);
+        line-height: 1.65;
+        letter-spacing: 0;
+        text-wrap: pretty;
+      }
+
+      p { max-width: 70ch; margin: 0 0 1em; }
+      p:last-child { margin-bottom: 0; }
+
+      ul {
+        display: grid;
+        gap: 8px;
+        max-width: 70ch;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        margin: 0;
+        padding-left: 23px;
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.82em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+        color: var(--fg);
+        font-family: var(--font-display);
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      h1 {
+        max-width: 860px;
+        font-size: clamp(54px, 8.2vw, 112px);
+        line-height: 0.96;
+      }
+
+      h2 {
+        max-width: 740px;
+        font-size: clamp(29px, 2.85vw, 46px);
+        line-height: 1.08;
+      }
+
+      h3 {
+        font-size: clamp(23px, 2.6vw, 34px);
+        line-height: 1.06;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+        transform: translateY(-140%);
+        padding: 10px 14px;
+        background: var(--fg);
+        color: #fff;
+        transition: transform 180ms var(--ease);
+      }
+
+      .skip-link:focus { transform: translateY(0); }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        border-bottom: 1px solid var(--border);
+        background: color-mix(in oklch, var(--bg) 92%, transparent);
+        backdrop-filter: blur(14px);
+      }
+
+      .header-inner {
+        display: grid;
+        grid-template-columns: minmax(190px, 1fr) auto auto;
+        gap: 22px;
+        align-items: center;
+        width: min(var(--max), calc(100% - 32px));
+        min-height: 68px;
+        margin: 0 auto;
+      }
+
+      .brand {
+        display: inline-grid;
+        gap: 2px;
+        text-decoration: none;
+      }
+
+      .brand strong {
+        font-family: var(--font-display);
+        font-size: 23px;
+        line-height: 1;
+      }
+
+      .brand span,
+      .eyebrow,
+      .scene-label,
+      .chapter-tag,
+      .route-index,
+      .small-note,
+      .placeholder-kicker {
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .main-nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .main-nav a:hover { color: var(--fg); }
+
+      .eyebrow,
+      .chapter-tag,
+      .scene-label,
+      .route-index,
+      .placeholder-kicker {
+        color: var(--accent);
+      }
+
+      .button,
+      .copy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border: 1px solid var(--fg);
+        border-radius: 4px;
+        background: var(--fg);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 200ms var(--ease), background 200ms var(--ease), border-color 200ms var(--ease), color 200ms var(--ease);
+      }
+
+      .button:hover,
+      .copy-button:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent);
+        background: var(--accent);
+      }
+
+      .button.secondary,
+      .copy-button.secondary {
+        border-color: var(--border);
+        background: transparent;
+        color: var(--fg);
+      }
+
+      .button.secondary:hover,
+      .copy-button.secondary:hover {
+        border-color: var(--fg);
+        background: var(--blue-wash);
+      }
+
+      a.button[href="/entrepreneurs"] {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      a.button[href="/entrepreneurs"]:hover {
+        border-color: var(--fg);
+        background: var(--fg);
+        color: #fff;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.03fr) minmax(340px, 0.97fr);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: center;
+        width: min(var(--max), calc(100% - 32px));
+        min-height: calc(100svh - 68px);
+        margin: 0 auto;
+        padding: clamp(46px, 7vw, 92px) 0 clamp(34px, 5vw, 70px);
+      }
+
+      .hero,
+      .chapter-map,
+      .section,
+      .final-cta {
+        scroll-margin-top: 88px;
+      }
+
+      .hero-copy {
+        display: grid;
+        gap: 24px;
+      }
+
+      .hero-lead {
+        max-width: 690px;
+        color: var(--fg);
+        font-size: clamp(22px, 2vw, 30px);
+        line-height: 1.35;
+      }
+
+      .hero-note {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        max-width: 720px;
+      }
+
+      .hero-note article {
+        min-width: 0;
+        padding: 18px;
+        border: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .hero-note article.hero-note-primary {
+        border-color: color-mix(in oklch, var(--accent) 54%, var(--border));
+        border-left: 5px solid var(--accent);
+        background: linear-gradient(135deg, var(--blue-wash), #fff 76%);
+        box-shadow: 0 16px 34px rgba(36, 82, 255, 0.09);
+      }
+
+      .hero-note h2 {
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero-note p {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .microcopy {
+        display: block;
+        max-width: 380px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .visual-placeholder {
+        position: relative;
+        min-width: 0;
+        border: 1px solid var(--border);
+        background:
+          linear-gradient(135deg, color-mix(in oklch, var(--blue-wash) 88%, #fff), #fff 56%, color-mix(in oklch, var(--copper-soft) 74%, #fff)),
+          var(--surface);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .visual-placeholder::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid color-mix(in oklch, var(--accent) 32%, transparent);
+        pointer-events: none;
+      }
+
+      .visual-placeholder::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        bottom: -70px;
+        width: 210px;
+        height: 210px;
+        border: 1px solid color-mix(in oklch, var(--copper) 40%, transparent);
+        transform: rotate(18deg);
+        pointer-events: none;
+      }
+
+      .hero-placeholder {
+        align-self: stretch;
+        min-height: 520px;
+        padding: clamp(28px, 4vw, 46px);
+      }
+
+      .placeholder-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 22px;
+        height: 100%;
+        align-content: space-between;
+      }
+
+      .placeholder-title {
+        max-width: 11ch;
+        font-family: var(--font-display);
+        font-size: clamp(42px, 5.5vw, 72px);
+        line-height: 0.95;
+      }
+
+      .placeholder-text {
+        max-width: 460px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .route-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .route-card {
+        display: grid;
+        gap: 8px;
+        min-height: 136px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: color-mix(in oklch, #fff 86%, var(--blue-wash));
+      }
+
+      .route-card strong {
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .route-card span:not(.route-index) {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .article-shell {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 34px 0 96px;
+      }
+
+      .chapter-map {
+        display: grid;
+        gap: 18px;
+        align-items: start;
+        margin-bottom: clamp(44px, 8vw, 92px);
+        padding: 34px 0 44px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .chapter-map p {
+        max-width: 82ch;
+        margin-top: 8px;
+        color: var(--muted);
+      }
+
+      .chapter-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        max-width: 980px;
+      }
+
+      .chapter-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .chapter-links a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .chapter-cta-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: center;
+        max-width: 980px;
+        margin-top: 4px;
+        padding: 18px;
+        border: 1px solid color-mix(in oklch, var(--accent) 36%, var(--border));
+        border-left: 5px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        background: var(--blue-wash);
+      }
+
+      .chapter-cta-row p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .chapter-cta-row .button {
+        border-color: var(--accent);
+        background: var(--accent);
+        white-space: nowrap;
+      }
+
+      .section {
+        display: grid;
+        grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(28px, 5vw, 70px);
+        align-items: start;
+        padding: clamp(44px, 7vw, 92px) 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section.reverse {
+        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      }
+
+      .section.reverse .section-visual { order: 2; }
+      .section.reverse .section-copy { order: 1; }
+
+      .section-visual {
+        display: grid;
+        align-self: stretch;
+        min-height: 330px;
+        padding: clamp(22px, 3vw, 34px);
+      }
+
+      .section-copy {
+        display: grid;
+        order: 2;
+        gap: 18px;
+        min-width: 0;
+      }
+
+      .section:not(.reverse) .section-visual { order: 1; }
+      .section:not(.reverse) .section-copy { order: 2; }
+
+      .section > .wide-row,
+      .section > .cards-grid,
+      .section > .inside-grid,
+      .section > .proof-grid,
+      .section > .loop-grid,
+      .section > .phrase-grid,
+      .section > .compare-strip,
+      .section > .contrast-panel,
+      .section > .purpose-panel,
+      .section > .value-split,
+      .section > .callout {
+        grid-column: 1 / -1;
+        order: 3;
+      }
+
+      .section-heading {
+        display: grid;
+        gap: 14px;
+        margin-bottom: 6px;
+      }
+
+      .chapter-tag {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        max-width: 100%;
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid var(--border);
+        background: var(--blue-wash);
+        white-space: normal;
+      }
+
+      .text-flow {
+        display: grid;
+        gap: 0;
+        max-width: 74ch;
+      }
+
+      .callout {
+        margin-top: 8px;
+        padding: clamp(20px, 3vw, 30px);
+        border: 1px solid var(--border);
+        border-left: 5px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        background: var(--blue-wash);
+      }
+
+      .callout strong {
+        display: block;
+        margin-bottom: 8px;
+        font-family: var(--font-display);
+        font-size: clamp(24px, 2.6vw, 34px);
+        line-height: 1.08;
+      }
+
+      .callout.copper {
+        border-left-color: var(--copper);
+        background: var(--copper-soft);
+      }
+
+      .callout.green {
+        border-left-color: var(--green);
+        background: var(--green-soft);
+      }
+
+      .callout .button,
+      .callout .copy-button {
+        margin-top: 10px;
+      }
+
+      .callout-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-top: 14px;
+      }
+
+      .callout-actions .button,
+      .callout-actions .copy-button {
+        margin-top: 0;
+      }
+
+      .mini-grid,
+      .cards-grid,
+      .inside-grid,
+      .proof-grid,
+      .loop-grid,
+      .phrase-grid {
+        display: grid;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .mini-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .inside-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .proof-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .loop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .phrase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-card,
+      .work-card,
+      .inside-card,
+      .proof-card,
+      .loop-card,
+      .phrase-card,
+      .compare-card {
+        display: grid;
+        gap: 10px;
+        align-content: start;
+        min-width: 0;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .mini-card strong,
+      .work-card strong,
+      .inside-card strong,
+      .proof-card strong,
+      .loop-card strong,
+      .phrase-card strong,
+      .compare-card strong {
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .mini-card span,
+      .work-card span,
+      .inside-card span,
+      .proof-card span,
+      .loop-card span,
+      .phrase-card span,
+      .compare-card span {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.48;
+      }
+
+      .work-card.owner { border-top: 4px solid var(--accent); }
+      .work-card.marketer { border-top: 4px solid var(--copper); }
+      .work-card.root { border-top: 4px solid var(--green); }
+
+      .wide-row {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .wide-row.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .wide-row.four {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .wide-row .callout {
+        margin-top: 0;
+      }
+
+      .contrast-panel {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+        gap: 24px;
+        align-items: start;
+        padding: clamp(24px, 4vw, 38px);
+        border: 1px solid var(--border);
+        border-left: 5px solid var(--fg);
+        border-radius: 0 8px 8px 0;
+        background: var(--fg);
+        color: #fff;
+      }
+
+      .contrast-panel h3 {
+        color: #fff;
+        font-size: clamp(30px, 3.8vw, 52px);
+      }
+
+      .contrast-panel p,
+      .contrast-panel li,
+      .contrast-panel span {
+        color: color-mix(in oklch, #fff 84%, transparent);
+      }
+
+      .contrast-panel li::before { background: #fff; }
+
+      .purpose-panel {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(18px, 4vw, 42px);
+        align-items: start;
+        padding: clamp(24px, 4vw, 40px);
+        border: 1px solid var(--border);
+        border-left: 5px solid var(--copper);
+        border-radius: 0 8px 8px 0;
+        background: color-mix(in oklch, var(--copper-soft) 62%, #fff);
+      }
+
+      .purpose-panel h3 {
+        font-size: clamp(27px, 3.2vw, 44px);
+      }
+
+      .purpose-panel h2 {
+        font-size: clamp(30px, 3.6vw, 48px);
+      }
+
+      .purpose-panel .chapter-tag {
+        margin-bottom: 14px;
+      }
+
+      .value-split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .value-card {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+        padding: clamp(22px, 3vw, 32px);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .value-card.highlight {
+        border-color: color-mix(in oklch, var(--accent) 36%, var(--border));
+        background: var(--blue-wash);
+      }
+
+      .value-card strong {
+        font-family: var(--font-display);
+        font-size: clamp(25px, 2.7vw, 38px);
+        line-height: 1.08;
+      }
+
+      .value-card span {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .value-card .button {
+        justify-self: start;
+        margin-top: 4px;
+      }
+
+      .compare-strip {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .compare-card.highlight {
+        border-color: color-mix(in oklch, var(--accent) 34%, var(--border));
+        background: var(--blue-wash);
+      }
+
+      .proof-card {
+        min-height: 168px;
+      }
+
+      .proof-card b {
+        color: var(--accent);
+        font-family: var(--font-display);
+        font-size: clamp(32px, 4vw, 54px);
+        line-height: 0.95;
+      }
+
+      .placeholder-map {
+        display: grid;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .map-line {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .map-line span:first-child {
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .map-line span:last-child {
+        display: block;
+        height: 1px;
+        background: color-mix(in oklch, var(--fg) 18%, transparent);
+      }
+
+      .section-visual.compact {
+        min-height: 300px;
+      }
+
+      .image-frame {
+        aspect-ratio: 1122 / 1402;
+        min-height: auto;
+        max-width: 100%;
+        padding: 0;
+        background: var(--surface);
+      }
+
+      .image-frame::before,
+      .image-frame::after {
+        display: none;
+      }
+
+      .image-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-placeholder.image-frame,
+      .section-visual.image-frame,
+      .section-visual.compact.image-frame {
+        min-height: auto;
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero-placeholder.image-frame {
+        align-self: center;
+      }
+
+      .final-cta {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(24px, 5vw, 60px);
+        align-items: center;
+        padding: clamp(34px, 5vw, 56px);
+        border: 1px solid var(--border);
+        border-left: 6px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        background: var(--blue-wash);
+      }
+
+      .final-cta h2 {
+        font-size: clamp(32px, 3.5vw, 54px);
+      }
+
+      .final-actions {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+
+      .final-actions .button,
+      .final-actions .copy-button {
+        width: max-content;
+      }
+
+      .final-cta .button {
+        border-color: var(--accent);
+        background: var(--accent);
+      }
+
+      .final-cta .button.secondary,
+      .final-cta .copy-button.secondary {
+        border-color: var(--fg);
+        background: #fff;
+        color: var(--fg);
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 44px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer a {
+        color: var(--fg);
+        text-decoration: none;
+      }
+
+      .longread-menu {
+        position: fixed;
+        left: 18px;
+        bottom: 18px;
+        z-index: 70;
+        width: min(360px, calc(100vw - 36px));
+        opacity: 0;
+        transform: translateY(18px);
+        pointer-events: none;
+        transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+      }
+
+      .longread-menu.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .longread-menu summary {
+        display: inline-flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0 15px;
+        border: 1px solid var(--fg);
+        border-radius: 4px;
+        background: var(--fg);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .longread-menu summary::-webkit-details-marker { display: none; }
+
+      .longread-menu[open] summary {
+        border-color: var(--accent);
+        background: var(--accent);
+      }
+
+      .menu-panel {
+        display: grid;
+        gap: 6px;
+        max-height: min(62vh, 520px);
+        margin-top: 8px;
+        padding: 12px;
+        overflow: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: color-mix(in oklch, var(--bg) 96%, #fff);
+        box-shadow: var(--shadow);
+      }
+
+      .menu-panel a {
+        display: block;
+        padding: 10px 12px;
+        border-radius: 4px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .menu-panel a:hover {
+        background: var(--blue-wash);
+        color: var(--fg);
+      }
+
+      .toast {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 90;
+        max-width: min(420px, calc(100vw - 36px));
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--fg);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: opacity 200ms var(--ease), transform 200ms var(--ease);
+      }
+
+      .toast.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1080px) {
+        .main-nav { display: none; }
+        .header-inner { grid-template-columns: minmax(180px, 1fr) auto; }
+        .hero,
+        .section,
+        .section.reverse,
+        .chapter-map,
+        .chapter-cta-row,
+        .final-cta,
+        .contrast-panel,
+        .purpose-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .section.reverse .section-copy { order: 1; }
+        .section.reverse .section-visual { order: 2; }
+
+        .section-visual {
+          position: relative;
+          top: auto;
+          min-height: 280px;
+        }
+
+        .chapter-links { justify-content: flex-start; }
+        .chapter-cta-row .button { justify-self: start; }
+        .wide-row.four,
+        .loop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .inside-grid,
+        .cards-grid,
+        .proof-grid,
+        .compare-strip,
+        .value-split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+
+      @media (max-width: 720px) {
+        .header-inner {
+          width: min(var(--max), calc(100% - 24px));
+          min-height: 62px;
+        }
+
+        .brand strong { font-size: 21px; }
+        .brand span { font-size: 10px; }
+        .header-inner .button { display: none; }
+
+        .hero,
+        .article-shell,
+        .footer {
+          width: calc(100% - 24px);
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 38px;
+        }
+
+        .hero,
+        .chapter-map,
+        .final-cta {
+          scroll-margin-top: 76px;
+        }
+
+        h1 { font-size: clamp(48px, 16vw, 68px); }
+        h2 { font-size: clamp(28px, 7.4vw, 34px); }
+
+        .hero-note,
+        .route-cards,
+        .chapter-cta-row,
+        .mini-grid,
+        .wide-row,
+        .wide-row.three,
+        .wide-row.four,
+        .cards-grid,
+        .inside-grid,
+        .proof-grid,
+        .loop-grid,
+        .compare-strip,
+        .value-split {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-placeholder {
+          min-height: 430px;
+          padding: 24px;
+        }
+
+        .placeholder-title {
+          max-width: 12ch;
+          font-size: clamp(38px, 13vw, 54px);
+        }
+
+        .section {
+          padding: 52px 0;
+          scroll-margin-top: 76px;
+        }
+
+        .section-visual {
+          min-height: 250px;
+          padding: 22px;
+        }
+
+        .final-actions .button,
+        .final-actions .copy-button,
+        .hero-actions .button,
+        .hero-actions .copy-button,
+        .chapter-cta-row .button,
+        .callout-actions .button,
+        .callout-actions .copy-button,
+        .value-card .button {
+          width: 100%;
+        }
+
+        .longread-menu {
+          left: 12px;
+          bottom: 12px;
+          width: calc(100vw - 24px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109290984" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3767299;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <a class="skip-link" href="#content">К содержанию</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/">
+          <strong>Живой маркетинг</strong>
+          <span>перед лонгридом</span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="#for-whom">Для кого</a>
+          <a href="#why-now">Что делать</a>
+          <a href="#situation">Ситуация</a>
+          <a href="#practice">Доверие</a>
+        </nav>
+        <a class="button" data-track-goal="entrepreneursStartLongreadHeader" href="/entrepreneurs">Читать лонгрид</a>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <span class="eyebrow">Бесплатный лонгрид для собственников малого бизнеса</span>
+          <h1>Для кого?</h1>
+          <p class="hero-lead">Если у вас есть продукт, продажи, сотрудники или подрядчики, но маркетинг все равно не складывается в понятную систему, начните с этого материала.</p>
+          <div class="hero-note" aria-label="Короткое объяснение">
+            <article id="for-whom">
+              <h2>Для кого</h2>
+              <p>Для собственников малого бизнеса, которым нужно выстроить маркетинг, но не нужно становиться профессиональными маркетологами.</p>
+            </article>
+            <article class="hero-note-primary">
+              <h2>Что это</h2>
+              <p>Это большая и подробная статья о том, как трансформировать маркетинг компании из хаотичных и несистемных действий в управляемый, предсказуемый бизнес-процесс с конкретными показателями.</p>
+            </article>
+          </div>
+          <div class="hero-actions">
+            <a class="button" data-track-goal="entrepreneursStartLongreadHero" href="/entrepreneurs">Читать лонгрид</a>
+            <button class="copy-button secondary" type="button" data-copy-url="https://www.live-marketing.ru/entrepreneurs" data-track-goal="entrepreneursStartCopyHero">Скопировать ссылку для маркетолога</button>
+          </div>
+          <span class="microcopy">Материал длинный. Он не обещает быстрых чудес, но помогает увидеть систему, с которой уже можно работать.</span>
+        </div>
+
+        <aside class="visual-placeholder hero-placeholder image-frame" aria-label="Иллюстрация: развилка перед чтением">
+          <img
+            src="/assets/entrepreneurs-start/entrepreneurs-start-01-reading-fork.webp"
+            width="1122"
+            height="1402"
+            alt="Развилка использования лонгрида: прочитать самому, отправить маркетологу, разобрать вместе или пойти с сопровождением"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </aside>
+      </section>
+
+      <div class="article-shell">
+        <section class="chapter-map" aria-label="Маршрут страницы">
+          <div>
+            <span class="eyebrow">Маршрут чтения</span>
+            <h2>Сначала выберите, как использовать материал.</h2>
+            <p>Можно прочитать лонгрид самому и начать разбирать маркетинг по шагам. Можно отправить его маркетологу или подрядчику, чтобы появилась общая точка отсчета. А еще лучше — прочитать вместе: тогда разговор быстрее переходит из режима «почему нет заявок?» в режим «что мы проверяем, какие выводы уже есть и что нужно изменить в системе?».</p>
+          </div>
+          <nav class="chapter-links" aria-label="Разделы страницы">
+            <a href="#why-now">01 · Что делать</a>
+            <a href="#situation">02 · Ситуация</a>
+            <a href="#frame">03 · Бизнес-процесс</a>
+            <a href="#author">04 · Зачем материал</a>
+            <a href="#practice">05 · Доверие</a>
+          </nav>
+          <div class="chapter-cta-row" aria-label="Переход к лонгриду">
+            <div>
+              <span class="small-note">Большой материал</span>
+              <p>Если вы уже поняли, что хотите читать сам разбор, переходите к лонгриду прямо сейчас.</p>
+            </div>
+            <a class="button" data-track-goal="entrepreneursStartLongreadRoute" href="/entrepreneurs">Читать лонгрид</a>
+          </div>
+        </section>
+
+        <section class="section reverse" id="why-now">
+          <aside class="section-visual visual-placeholder image-frame" aria-label="Иллюстрация: фундамент под инструментами">
+            <img
+              src="/assets/entrepreneurs-start/entrepreneurs-start-02-foundation-under-tools.webp"
+              width="1122"
+              height="1402"
+              alt="Маркетинговый фундамент под меняющимися инструментами: клиент, задача, путь, оффер и выводы"
+              loading="lazy"
+              decoding="async"
+            />
+          </aside>
+          <div class="section-copy">
+            <div class="section-heading">
+              <span class="chapter-tag">01 · Блокировки и ограничения. Что делать?</span>
+              <h2>Когда каналы меняются, важно держаться не за инструменты, а за фундамент</h2>
+            </div>
+            <div class="text-flow">
+              <p>Сейчас вокруг много материалов в жанре «что делать и куда бежать». Одни привычные рекламные каналы работают с ограничениями. Другие дорожают. Третьи требуют новых форматов, новых правил и новых навыков.</p>
+              <p>Из каждого утюга звучит очередной совет: срочно идите в новый канал, меняйте подрядчика, запускайте нейросети, снимайте короткие видео, переделывайте сайт, тестируйте новую рекламную связку.</p>
+              <p>Инструменты действительно важны. Но проблема в том, что сами по себе они не собирают маркетинг в систему.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <strong>Инструменты должны подчиняться фундаменту, а не наоборот.</strong>
+            <p>Если непонятно, кто ваш клиент, какую работу он пытается выполнить, почему он выбирает вас или не выбирает, где он сомневается и что должно привести его к заявке, любой инструмент быстро превращается в еще одну статью расходов.</p>
+          </div>
+          <div class="wide-row four" aria-label="Фундамент — практические вопросы">
+            <article class="mini-card"><strong>Кто наш клиент?</strong><span>Что он на самом деле пытается решить и как узнает о нас.</span></article>
+            <article class="mini-card"><strong>Где он сравнивает варианты?</strong><span>Что ему мешает оставить заявку и какой оффер ему понятен.</span></article>
+            <article class="mini-card"><strong>Какую задачу должен выполнять сайт, реклама и менеджер по продаже</strong><span>Не сами по себе, а как части одного пути к заявке.</span></article>
+            <article class="mini-card"><strong>Какие выводы остаются после теста?</strong><span>Какие гипотезы мы проверяем и что компания понимает после каждого шага.</span></article>
+          </div>
+          <div class="callout green">
+            <strong>В лонгриде я предлагаю не метаться между инструментами, а посмотреть глубже.</strong>
+            <p>На ту основу, от которой уже можно осмысленно выбирать рекламу, контент, сайт, аналитику, AI и задачи для команды.</p>
+            <div class="callout-actions">
+              <a class="button" data-track-goal="entrepreneursStartLongreadWhyNow" href="/entrepreneurs">Читать лонгрид</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="situation">
+          <aside class="section-visual visual-placeholder compact image-frame" aria-label="Иллюстрация: собственник и маркетолог">
+            <img
+              src="/assets/entrepreneurs-start/entrepreneurs-start-03-owner-marketer-language-gap.webp"
+              width="1122"
+              height="1402"
+              alt="Собственник и маркетолог смотрят на один процесс с разных сторон, между ними не хватает общего языка"
+              loading="lazy"
+              decoding="async"
+            />
+          </aside>
+          <div class="section-copy">
+            <div class="section-heading">
+              <span class="chapter-tag">02 · Ситуация</span>
+              <h2>Если вам знакома следующая ситуация, то вы попали по адресу</h2>
+            </div>
+            <div class="text-flow">
+              <p>Во многих компаниях маркетинг вроде бы есть.</p>
+              <p>Есть сайт. Есть реклама. Есть посты. Есть подрядчики. Иногда есть штатный маркетолог. Иногда даже есть отчеты, таблицы, план публикаций и регулярные созвоны.</p>
+              <p>Но собственник все равно не чувствует управляемости.</p>
+              <p>Бюджет уходит, задачи ставятся, активности идут, а понятной системы заявок не появляется. В какой-то момент начинает казаться, что нормальных маркетологов просто нет: один не умеет в рекламу, другой не понимает продукт, третий красиво говорит, но не приносит результат.</p>
+              <p>С другой стороны, маркетолог часто находится в такой же неприятной ситуации. От него ждут заявок, но не дают ясной стратегии, данных о клиентах, нормального оффера, связки с продажами и времени на исследование.</p>
+              <p>В итоге страдают все: бизнес, собственник, маркетолог, подрядчики и продажи.</p>
+            </div>
+          </div>
+          <div class="wide-row three" aria-label="Три стороны проблемы">
+            <article class="work-card owner">
+              <span class="scene-label">Собственник</span>
+              <strong>«Опять не дали результат»</strong>
+              <span>Кажется, что нормальных маркетологов просто нет: один не умеет в рекламу, другой не понимает продукт, третий красиво говорит.</span>
+            </article>
+            <article class="work-card marketer">
+              <span class="scene-label">Маркетолог</span>
+              <strong>«Мою работу опять не понимают»</strong>
+              <span>Работа сводится к срочным задачам: сделать макет, написать пост, запустить рекламу, поправить сайт.</span>
+            </article>
+            <article class="work-card root">
+              <span class="scene-label">Корень</span>
+              <strong>Нет общего языка</strong>
+              <span>Стороны по-разному понимают, что такое маркетинг и чем он должен управлять.</span>
+            </article>
+          </div>
+          <div class="callout green">
+            <strong>Этот лонгрид нужен, чтобы разложить базовые понятия и дать собственнику рабочий язык.</strong>
+            <p>На этом языке можно разговаривать с маркетингом не через раздражение, а через задачи, факты и процесс.</p>
+            <div class="callout-actions">
+              <a class="button" data-track-goal="entrepreneursStartLongreadSituation" href="/entrepreneurs">Читать лонгрид</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reverse" id="frame">
+          <aside class="section-visual visual-placeholder image-frame" aria-label="Иллюстрация: маркетинг как бизнес-процесс">
+            <img
+              src="/assets/entrepreneurs-start/entrepreneurs-start-04-marketing-business-process.webp"
+              width="1122"
+              height="1402"
+              alt="Клиент, продукт, сайт, реклама, продажи и выводы связаны в один путь к заявке"
+              loading="lazy"
+              decoding="async"
+            />
+          </aside>
+          <div class="section-copy">
+            <div class="section-heading">
+              <span class="chapter-tag">03 · Маркетинг как бизнес-процесс</span>
+              <h2>Маркетинг — это не реклама.</h2>
+            </div>
+            <div class="text-flow">
+              <p>Если максимально упростить, маркетинг в компании должен связывать клиента, продукт и путь к покупке.</p>
+              <p>Реклама в этой системе важна, но она не может одна отвечать за весь результат. Рекламный кабинет может привести человека на сайт. Но если человек не понимает предложение, не видит своей ситуации, не доверяет компании, не получает ответа от продаж или не может сравнить варианты, проблема не решается настройкой кампании.</p>
+              <p>Маркетинг как бизнес-процесс включает:</p>
+              <ul>
+                <li>понимание клиента и его задачи;</li>
+                <li>продукт и его ценность;</li>
+                <li>оффер и позиционирование;</li>
+                <li>путь клиента от первой мысли до заявки;</li>
+                <li>рекламу и другие источники трафика;</li>
+                <li>сайт, контент и материалы для продаж;</li>
+                <li>работу продавцов;</li>
+                <li>показатели, бюджет и выводы;</li>
+                <li>задачи для сотрудников и подрядчиков.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout">
+            <p>Собственнику не обязательно становиться профессиональным маркетологом. Но если маркетинг влияет на деньги компании, собственнику важно понимать, как устроен этот процесс и чем в нем управлять.</p>
+            <strong>Задача не в том, чтобы изучить все инструменты маркетинга. Задача в том, чтобы понимать систему, в которой эти инструменты работают.</strong>
+          </div>
+        </section>
+
+        <section class="section" id="author">
+          <div class="purpose-panel">
+            <div>
+              <span class="chapter-tag">04 · Зачем материал</span>
+              <h2>Зачем я публикую этот материал</h2>
+            </div>
+            <div>
+              <p>Лонгрид бесплатный, и я хочу, чтобы он был полезен сам по себе. Его можно прочитать, разобрать со своим маркетологом и уже на этой основе начать задавать более точные вопросы к своему маркетингу.</p>
+              <p>Но у материала есть и коммерческая задача.</p>
+              <p>Я собираю первый набор практикума «Живой маркетинг» и хочу, чтобы человек, который оставит заявку, сначала понял мою логику. Не купил обещание быстрого результата. Не пришел за секретной схемой. А увидел, как я предлагаю смотреть на маркетинг.</p>
+              <p>Для меня это новое практическое направление. Я хочу соединить свой опыт консультанта, преподавателя и человека, который сам собирает бизнес-проекты, в формате малой группы.</p>
+            </div>
+          </div>
+          <div class="value-split">
+            <article class="value-card">
+              <strong>Лонгрид показывает базу бесплатно.</strong>
+              <span>Его можно использовать самостоятельно: прочитать, разобрать с маркетологом и начать задавать более точные вопросы к своему маркетингу.</span>
+              <a class="button" data-track-goal="entrepreneursStartLongreadValue" href="/entrepreneurs">Читать лонгрид</a>
+            </article>
+            <article class="value-card highlight">
+              <strong>Практикум нужен тем, кому важно не остаться с этой базой один на один.</strong>
+              <span>Там появляется мое участие, малая группа, разбор вашей ситуации и обратная связь по тому, как применять логику к конкретному бизнесу.</span>
+              <a class="button" data-track-goal="entrepreneursStartPracticeValue" href="/">Открыть страницу практикума</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reverse" id="practice">
+          <aside class="section-visual visual-placeholder compact image-frame" aria-label="Иллюстрация: практика за рамкой текста">
+            <img
+              src="/assets/entrepreneurs-start/entrepreneurs-start-05-practice-trust-base.webp"
+              width="1122"
+              height="1402"
+              alt="Практический опыт в маркетинге, экспорте, производстве, B2B и преподавании собирается в одну рабочую методику"
+              loading="lazy"
+              decoding="async"
+            />
+          </aside>
+          <div class="section-copy">
+            <div class="section-heading">
+              <span class="chapter-tag">05 · Почему мне можно доверять</span>
+              <h2>Основано на 13 годах моей практики в маркетинге</h2>
+            </div>
+            <div class="text-flow">
+              <p>Я в маркетинге с 2013 года. За это время работал с образовательными проектами, производством, B2B, потребительскими продуктами, пищевыми предприятиями, сложными продажами и экспортными рынками.</p>
+              <p>В прошлом я отвечал за развитие экспортных рынков VELES: от анализа рынка и позиционирования до продаж, сопровождения и логистики. Компания вышла на 12 экспортных рынков.</p>
+              <p>В консалтинговых проектах я работал с задачами, где маркетинг нельзя было свести к рекламе. Нужно было понять клиента, пересобрать предложение, подготовить материалы для продаж, связать маркетинг с коммерческой функцией и довести стратегию до практических действий.</p>
+              <p>Несколько фактов, чтобы было понятно, на чем построен этот материал:</p>
+            </div>
+          </div>
+          <div class="proof-grid" aria-label="Факты опыта">
+            <article class="proof-card"><b>2013</b><strong>Год входа в маркетинг</strong><span>Опыт в образовании, производстве, B2B, потребительских продуктах и сложных продажах.</span></article>
+            <article class="proof-card"><b>12</b><strong>Экспортных рынков</strong><span>Развитие VELES: анализ рынка, позиционирование, продажи, сопровождение и логистика.</span></article>
+            <article class="proof-card"><b>675 млн</b><strong>Потенциальный объем заявок</strong><span>Это объем заявок и потенциальных сделок, а не заявленная выручка.</span></article>
+          </div>
+          <div class="callout">
+            <p>675 млн рублей — это объем заявок и потенциальных сделок, а не заявленная выручка. Я специально уточняю это, потому что в маркетинге легко превратить любую цифру в красивую, но нечестную витрину.</p>
+            <p>В реальных проектах маркетинг работает только тогда, когда связан с клиентом, продуктом, продажами, командой и управленческими решениями.</p>
+          </div>
+        </section>
+
+        <section class="final-cta" id="final">
+          <div>
+            <span class="eyebrow">Дальше</span>
+            <h2>Выберите следующий шаг</h2>
+          </div>
+          <div class="final-actions">
+            <p>Если хотите сначала разобраться самостоятельно, переходите к лонгриду. Если уже понятно, что нужна работа с разбором и обратной связью, откройте страницу практикума.</p>
+            <a class="button" data-track-goal="entrepreneursStartLongreadFinal" href="/entrepreneurs">Читать лонгрид</a>
+            <a class="button secondary" data-track-goal="entrepreneursStartPracticeFinal" href="/">Открыть страницу практикума</a>
+            <button class="copy-button secondary" type="button" data-copy-url="https://www.live-marketing.ru/entrepreneurs" data-track-goal="entrepreneursStartCopyFinal">Скопировать ссылку для маркетолога</button>
+            <span class="microcopy">Сначала — бесплатный разбор. Потом, если логика близка, можно смотреть формат практикума.</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <details class="longread-menu" aria-label="Содержание страницы">
+      <summary>Содержание</summary>
+      <nav class="menu-panel" aria-label="Быстрое содержание">
+        <a href="#top">Начало</a>
+        <a href="#why-now">01 · Что делать</a>
+        <a href="#situation">02 · Ситуация</a>
+        <a href="#frame">03 · Бизнес-процесс</a>
+        <a href="#author">04 · Зачем материал</a>
+        <a href="#practice">05 · Доверие</a>
+        <a href="#final">Читать лонгрид</a>
+      </nav>
+    </details>
+
+    <div class="toast" role="status" aria-live="polite">Ссылка скопирована</div>
+
+    <footer class="footer">
+      <span>Живой маркетинг · JTBD · CJM · AI</span>
+      <a href="/privacy">Политика конфиденциальности</a>
+    </footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var menu = document.querySelector(".longread-menu");
+        var toast = document.querySelector(".toast");
+        var toastTimer = null;
+
+        function updateProgress() {
+          var body = document.body;
+          var scrollTop = window.pageYOffset || root.scrollTop || body.scrollTop || 0;
+          var max = Math.max(1, body.scrollHeight - window.innerHeight);
+          var progress = Math.min(100, Math.max(0, (scrollTop / max) * 100));
+          root.style.setProperty("--read-progress", progress.toFixed(2) + "%");
+
+          if (menu) {
+            var secondScreen = Math.max(420, window.innerHeight * 0.82);
+            var isVisible = scrollTop >= secondScreen;
+            menu.classList.toggle("is-visible", isVisible);
+            if (!isVisible && menu.open) {
+              menu.open = false;
+            }
+          }
+        }
+
+        function trackGoal(goalName) {
+          if (!goalName) return;
+
+          try {
+            if (typeof window.ym === "function") {
+              window.ym(109290984, "reachGoal", goalName);
+            }
+          } catch (error) {}
+
+          try {
+            var tmr = window._tmr || (window._tmr = []);
+            tmr.push({ id: "3767299", type: "reachGoal", goal: goalName });
+          } catch (error) {}
+        }
+
+        function decorateInternalLink(link) {
+          var search = window.location.search;
+          if (!search || !link || !link.getAttribute("href")) return;
+
+          var href = link.getAttribute("href");
+          if (!href || href.charAt(0) === "#" || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) return;
+
+          try {
+            var url = new URL(href, window.location.origin);
+            if (url.origin !== window.location.origin && url.hostname !== "www.live-marketing.ru") return;
+
+            var currentParams = new URLSearchParams(search);
+            currentParams.forEach(function (value, key) {
+              if (key.indexOf("utm_") === 0 || key === "vk_click_id" || key === "yclid") {
+                if (!url.searchParams.has(key)) {
+                  url.searchParams.set(key, value);
+                }
+              }
+            });
+
+            link.setAttribute("href", url.pathname + url.search + url.hash);
+          } catch (error) {}
+        }
+
+        function showToast(message) {
+          if (!toast) return;
+          toast.textContent = message;
+          toast.classList.add("is-visible");
+          window.clearTimeout(toastTimer);
+          toastTimer = window.setTimeout(function () {
+            toast.classList.remove("is-visible");
+          }, 2200);
+        }
+
+        function copyLink(button) {
+          var url = button.getAttribute("data-copy-url") || window.location.href;
+          var search = window.location.search;
+
+          try {
+            var target = new URL(url, window.location.origin);
+            if (search) {
+              var currentParams = new URLSearchParams(search);
+              currentParams.forEach(function (value, key) {
+                if (key.indexOf("utm_") === 0 || key === "vk_click_id" || key === "yclid") {
+                  if (!target.searchParams.has(key)) {
+                    target.searchParams.set(key, value);
+                  }
+                }
+              });
+            }
+            url = target.toString();
+          } catch (error) {}
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function () {
+              showToast("Ссылка на лонгрид скопирована");
+            }).catch(function () {
+              showToast(url);
+            });
+          } else {
+            showToast(url);
+          }
+        }
+
+        document.querySelectorAll("a[href]").forEach(function (link) {
+          decorateInternalLink(link);
+          link.addEventListener("click", function () {
+            trackGoal(link.getAttribute("data-track-goal"));
+          });
+        });
+
+        document.querySelectorAll("[data-copy-url]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            trackGoal(button.getAttribute("data-track-goal"));
+            copyLink(button);
+          });
+        });
+
+        if (menu) {
+          menu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              menu.open = false;
+            });
+          });
+          window.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+              menu.open = false;
+            }
+          });
+        }
+
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+        updateProgress();
+      })();
+    </script>
+  </body>
+</html>
